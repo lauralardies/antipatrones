@@ -36,3 +36,68 @@ El código proporcionado en la sección anterior muestra algunas característica
 
 
 ## Código
+
+### Archivo `suma.py`
+```
+def suma(num1, num2):
+    '''
+    Función que se encarga de sumar dos números
+    '''
+    return num1 + num2
+```
+
+### Archivo `resta.py`
+```
+def resta(num1, num2):
+    '''
+    Función que se encarga de restar dos números
+    '''
+    return num1 - num2
+```
+
+### Archivo `multiplicacion.py`
+```
+def multiplicacion(num1, num2):
+    '''
+    Función que se encarga de multiplicar dos números
+    '''
+    return num1 * num2
+```
+
+### Archivo `division.py`
+```
+def division(num1, num2):
+    '''
+    Función que se encarga de dividir dos números
+    '''
+    if num2 != 0:
+        return num1 / num2
+    else: # Si el divisor es cero, lanzamos una excepción
+        raise ValueError("No se puede dividir por cero")
+```
+
+### Archivo `operacion.py`
+```
+from suma import suma
+from resta import resta
+from multiplicacion import multiplicacion
+from division import division
+
+
+
+def calcular(operacion, num1, num2):
+    try: # Intentamos realizar la operación
+        if operacion == "suma":
+            return suma(num1, num2) # Hemos creado una función suma que solo tiene la responsabilidad de sumar
+        elif operacion == "resta":
+            return resta(num1, num2) # Hemos creado una función resta que solo tiene la responsabilidad de restar
+        elif operacion == "multiplicacion":
+            return multiplicacion(num1, num2) # Hemos creado una función multiplicacion que solo tiene la responsabilidad de multiplicar
+        elif operacion == "division":
+            return division(num1, num2) # Hemos creado una función division que solo tiene la responsabilidad de dividir
+        else:
+            raise ValueError("Operacion no valida") # Si la operación no es ninguna de las anteriores, lanzamos una excepción para controlar el error
+    except ValueError as e: # Capturamos la excepción en caso de que no se pueda dividir por cero
+        print(e)
+        return None # Devolvemos None en caso de que no se pueda realizar la operación
+```
