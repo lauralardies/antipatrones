@@ -36,28 +36,26 @@ def btn_clear():
     '''
     Función que se encarga de limpiar el input
     '''
-    input_texto = ""
+    input_texto = []
     input_area.delete(0, END)
 
 def btn_igual():
     '''
     Función que se encarga de realizar la operación
     '''
-    if len(input_texto) == 3:
-        num1 = int(input_texto[0])
-        num2 = int(input_texto[2])
-        operacion = input_texto[1]
-        if operacion == "+":
-            operacion = "suma"
-        elif operacion == "-":
-            operacion = "resta"
-        elif operacion == "x":
-            operacion = "multiplicacion"
-        elif operacion == "/":
-            operacion = "division"
-        resultado = str(calcular(operacion, num1, num2))
-    else:
-        resultado = ""
+    texto = input_texto[-3:]
+    num1 = int(texto[0])
+    num2 = int(texto[2])
+    operacion = texto[1]
+    if operacion == "+":
+        operacion = "suma"
+    elif operacion == "-":
+        operacion = "resta"
+    elif operacion == "x":
+        operacion = "multiplicacion"
+    elif operacion == "/":
+        operacion = "division"
+    resultado = str(calcular(operacion, num1, num2))
     input_area.delete(0, END)
     input_area.insert(0, resultado)
 
