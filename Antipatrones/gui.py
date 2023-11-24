@@ -1,5 +1,5 @@
 from tkinter import *
-from Operaciones.operacion import calcular
+from operacion import calcular
 
 root = Tk() # Crear ventana principal
 
