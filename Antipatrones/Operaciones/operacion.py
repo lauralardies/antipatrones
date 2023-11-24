@@ -1,7 +1,7 @@
-from suma import suma
-from resta import resta
-from multiplicacion import multiplicacion
-from division import division
+from Operaciones.suma import suma
+from Operaciones.resta import resta
+from Operaciones.multiplicacion import multiplicacion
+from Operaciones.division import division
 
 
 
