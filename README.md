@@ -32,7 +32,7 @@ El código proporcionado en la sección anterior muestra algunas característica
 
 1. **Uso excesivo de `if`**. Se emplean muchas sentencias `if`, lo puede dificultar la lectura y comprensión del código. Para mejorar el código, deberíamos acompañar a las sentencias `if` con `else if`.
 2. **Mal manejo de errores**. En vez de elevar excepciones para manejar los errores, simplemente se imprimen mensajes de error (otra cosa que nunca se debería hacer, hacer `print` en una función). Por lo tanto, podrá haber complicaciones a la hora de buscar y gestionar errores. Por otro lado, simplemente mostrar el error en pantalla puede hacer más difícil la gestión y el control de errores en el código.
-3. **Falta de modularidad**. Cada función debe de tener una sola responsabilidad. Sin embargo, en el código proporcionado vemos que una sola función se encarga de hacer la suma, resta, multimplicación, etc. En resumen, en nuestro código tenemos una sola función que se encarga de todo, por lo que deberíamos separarlo en funciones diferentes.
+3. **Falta de modularidad**. Cada función debe de tener una sola responsabilidad. Sin embargo, en el código proporcionado vemos que una sola función se encarga de hacer la suma, resta, multimplicación, etc. En resumen, en nuestro código tenemos una sola función que se encarga de todo, por lo que deberíamos separarlo en funciones diferentes. Este cambio nos aportará un código mucho más legible y reutilizable.
 
 
 ## Código
